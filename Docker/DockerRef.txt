@@ -1,0 +1,115 @@
+1. Install Boot2Docker
+2. Launch Docker
+
+Rams-Macbook-Pro:sparkvagrant ram$ docker run hello-world
+Post http:///var/run/docker.sock/v1.19/containers/create: dial unix /var/run/docker.sock: no such file or directory. Are you trying to connect to a TLS-enabled daemon without TLS?
+Rams-Macbook-Pro:sparkvagrant ram$ 
+Rams-Macbook-Pro:sparkvagrant ram$ 
+Rams-Macbook-Pro:sparkvagrant ram$ docker run hello-world
+Post http:///var/run/docker.sock/v1.19/containers/create: dial unix /var/run/docker.sock: no such file or directory. Are you trying to connect to a TLS-enabled daemon without TLS?
+Rams-Macbook-Pro:sparkvagrant ram$ boot2docker 
+.vagrant/              mooc-setup-master/     
+Vagrantfile            mooc-setup-master.zip  
+Rams-Macbook-Pro:sparkvagrant ram$ boot2docker --help
+Usage: boot2docker [<options>] <command> [<args>]
+
+Boot2Docker management utility.
+
+Commands:
+   init                Create a new Boot2Docker VM.
+   up|start|boot       Start VM from any states.
+   ssh [ssh-command]   Login to VM via SSH.
+   save|suspend        Suspend VM and save state to disk.
+   down|stop|halt      Gracefully shutdown the VM.
+   restart             Gracefully reboot the VM.
+   poweroff            Forcefully power off the VM (may corrupt disk image).
+   reset               Forcefully power cycle the VM (may corrupt disk image).
+   delete|destroy      Delete Boot2Docker VM and its disk image.
+   config|cfg          Show selected profile file settings.
+   info                Display detailed information of VM.
+   ip                  Display the IP address of the VM's Host-only network.
+   shellinit           Display the shell commands to set up the Docker client.
+   status              Display current state of VM.
+   download            Download Boot2Docker ISO image.
+   upgrade             Upgrade the Boot2Docker ISO image (restart if running).
+   version             Display version information.
+
+Options:
+      --basevmdk="": Path to VMDK to use as base for persistent partition
+      --clobber=true: overwrite Docker client binary on boot2docker upgrade
+  -c, --cpus=4: number of CPUs for boot2docker.
+      --dhcp=true: enable VirtualBox host-only network DHCP.
+      --dhcpip=192.168.59.99: VirtualBox host-only network DHCP server address.
+  -s, --disksize=20000: boot2docker disk image size (in MB).
+      --dockerport=0: host Docker port (forward to port 2376 in VM). (deprecated - use with care)
+      --driver="virtualbox": hypervisor driver.
+      --force-upgrade-download=false: always download on boot2docker upgrade, never skip
+      --hostip=192.168.59.3: VirtualBox host-only network IP address.
+      --iso="/Users/ram/.boot2docker/boot2docker.iso": path to boot2docker ISO image.
+      --iso-url="https://api.github.com/repos/boot2docker/boot2docker/releases": source URL to provision the boot2docker ISO image.
+      --lowerip=192.168.59.103: VirtualBox host-only network DHCP lower bound.
+  -m, --memory=2048: virtual machine memory size (in MB).
+      --netmask=ffffff00: VirtualBox host-only network mask.
+      --no-dummy="": Example parameter for the dummy driver.
+      --retries=75: number of port knocking retries during 'start'
+      --serial=false: try serial console to get IP address (experimental)
+      --serialfile="": path to the serial socket/pipe.
+      --ssh="ssh": path to SSH client utility.
+      --ssh-keygen="ssh-keygen": path to ssh-keygen utility.
+      --sshkey="/Users/ram/.ssh/id_boot2docker": path to SSH key to use.
+      --sshport=2022: host SSH port (forward to port 22 in VM).
+      --upperip=192.168.59.254: VirtualBox host-only network DHCP upper bound.
+      --vbm="VBoxManage": path to VirtualBox management utility.
+      --vbox-share=[]: (defaults to '/Users=Users' if no shares are specified; use 'disable' to explicitly prevent any shares from being created) List of directories to share during 'up|start|boot' via VirtualBox Guest Additions, with optional labels
+  -v, --verbose=false: display verbose command invocations.
+      --vm="boot2docker-vm": virtual machine name.
+      --waittime=300: Time in milliseconds to wait between port knocking retries during 'start'
+error in run: config error: pflag: help requested
+
+Rams-Macbook-Pro:sparkvagrant ram$ boot2docker status
+
+error in run: Failed to get machine "boot2docker-vm": machine does not exist (Did you run `boot2docker init`?)
+Rams-Macbook-Pro:sparkvagrant ram$ 
+Rams-Macbook-Pro:sparkvagrant ram$ boot2docker shellinit
+error in run: Failed to get machine "boot2docker-vm": machine does not exist (Did you run `boot2docker init`?)
+Rams-Macbook-Pro:sparkvagrant ram$ boot2docker init
+Latest release for github.com/boot2docker/boot2docker is v1.7.1
+Downloading boot2docker ISO image...
+Success: downloaded https://github.com/boot2docker/boot2docker/releases/download/v1.7.1/boot2docker.iso
+	to /Users/ram/.boot2docker/boot2docker.iso
+Generating public/private rsa key pair.
+Your identification has been saved in /Users/ram/.ssh/id_boot2docker.
+Your public key has been saved in /Users/ram/.ssh/id_boot2docker.pub.
+The key fingerprint is:
+65:36:b6:b9:ad:c5:e0:67:ea:53:ff:6c:d0:73:f7:72 ram@Rams-Macbook-Pro.local
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|                 |
+|          *      |
+|         = +     |
+|        S +    . |
+|         . =. ..+|
+|          o.*. .=|
+|          .*  o.E|
+|         .+.   =o|
++-----------------+
+Rams-Macbook-Pro:sparkvagrant ram$ boot2docker status
+poweroff
+Rams-Macbook-Pro:sparkvagrant ram$ boot2docker shellinit
+error in run: VM "boot2docker-vm" is not running. (Did you run `boot2docker up`?)
+Rams-Macbook-Pro:sparkvagrant ram$ boot2docker up
+Waiting for VM and Docker daemon to start...
+..........................ooooooooooooooooooooo
+Started.
+Writing /Users/ram/.boot2docker/certs/boot2docker-vm/ca.pem
+Writing /Users/ram/.boot2docker/certs/boot2docker-vm/cert.pem
+Writing /Users/ram/.boot2docker/certs/boot2docker-vm/key.pem
+
+To connect the Docker client to the Docker daemon, please set:
+    export DOCKER_HOST=tcp://192.168.59.103:2376
+    export DOCKER_CERT_PATH=/Users/ram/.boot2docker/certs/boot2docker-vm
+    export DOCKER_TLS_VERIFY=1
+
+Rams-Macbook-Pro:sparkvagrant ram$ 
+

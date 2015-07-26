@@ -1,0 +1,49 @@
+https://spark.apache.org/docs/latest/
+https://spark.apache.org/docs/latest/building-spark.html
+
+http://blog.cloudera.com/blog/2014/07/estimating-financial-risk-with-apache-spark/
+http://www.infoq.com/presentations/spark-financial-modeling
+https://qconnewyork.com/ny2015/presentation/financial-modeling-apache-spark-calculating-value-risk
+
+Rams-Macbook-Pro:spark-1.4.1 ram$ pwd
+/Users/ram/Development/Spark/spark-1.4.1
+Rams-Macbook-Pro:spark-1.4.1 ram$ 
+Rams-Macbook-Pro:spark-1.4.1 ram$ 
+Rams-Macbook-Pro:spark-1.4.1 ram$ 
+Rams-Macbook-Pro:spark-1.4.1 ram$ build/mvn -DskipTests clean package
+exec: curl --progress-bar -L http://downloads.typesafe.com/zinc/0.3.5.3/zinc-0.3.5.3.tgz
+######################################################################## 100.0%
+exec: curl --progress-bar -L http://downloads.typesafe.com/scala/2.10.4/scala-2.10.4.tgz
+######################################################################## 100.0%
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Spark Project Parent POM
+[INFO] Spark Launcher Project
+[INFO] Spark Project Networking
+[INFO] Spark Project Shuffle Streaming Service
+[INFO] Spark Project Unsafe
+[INFO] Spark Project Core
+[INFO] Spark Project Bagel
+[INFO] Spark Project GraphX
+[INFO] Spark Project Streaming
+[INFO] Spark Project Catalyst
+[INFO] Spark Project SQL
+[INFO] Spark Project ML Library
+[INFO] Spark Project Tools
+[INFO] Spark Project Hive
+[INFO] Spark Project REPL
+[INFO] Spark Project Assembly
+[INFO] Spark Project External Twitter
+[INFO] Spark Project External Flume Sink
+[INFO] Spark Project External Flume
+[INFO] Spark Project External MQTT
+[INFO] Spark Project External ZeroMQ
+[INFO] Spark Project External Kafka
+[INFO] Spark Project Examples
+[INFO] Spark Project External Kafka Assembly
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Spark Project Parent POM 1.4.1
+[INFO] ------------------------------------------------------------------------

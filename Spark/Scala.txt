@@ -1,0 +1,38 @@
+ram@Rams-Macbook-Pro:~$ brew install Caskroom/cask/scala-ide
+Cloning into '/usr/local/Library/Taps/caskroom/homebrew-cask'...
+remote: Counting objects: 149121, done.
+remote: Total 149121 (delta 0), reused 0 (delta 0), pack-reused 149121
+Receiving objects: 100% (149121/149121), 43.63 MiB | 567.00 KiB/s, done.
+Resolving deltas: 100% (99251/99251), done.
+Checking connectivity... done.
+Tapped 1 formula
+==> Installing brew-cask from caskroom/homebrew-cask
+==> Cloning https://github.com/caskroom/homebrew-cask.git
+Cloning into '/Library/Caches/Homebrew/brew-cask--git'...
+remote: Counting objects: 2999, done.
+remote: Compressing objects: 100% (2902/2902), done.
+remote: Total 2999 (delta 117), reused 834 (delta 81), pack-reused 0
+Receiving objects: 100% (2999/2999), 5.74 MiB | 993.00 KiB/s, done.
+Resolving deltas: 100% (117/117), done.
+Checking connectivity... done.
+Note: checking out '2fc9d2323950a45549e1d5c4b25481d98726b85c'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+==> Checking out tag v0.54.1
+🍺  /usr/local/Cellar/brew-cask/0.54.1: 2731 files, 11M, built in 20 seconds
+==> brew cask install Caskroom/cask/scala-ide
+==> We need to make Caskroom for the first time at /opt/homebrew-cask/Caskroom
+==> We'll set permissions properly so we won't need sudo in the future
+Password:
+==> Downloading https://downloads.typesafe.com/scalaide-pack/4.1.0-vfinal-luna-211-20150704/scala-SDK-4.1.0-vfinal-
+######################################################################## 100.0%
+==> Symlinking App 'Eclipse.app' to '/Users/ram/Applications/Scala IDE.app'
+🍺  scala-ide staged at '/opt/homebrew-cask/Caskroom/scala-ide/4.1.0' (1445 files, 253M)
